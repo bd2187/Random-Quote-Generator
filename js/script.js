@@ -1,4 +1,7 @@
-generateQuote();
+var newQuoteBtn = document.querySelector('.newQuote');
+newQuoteBtn.addEventListener('click', generateQuote);
+
+
 function generateQuote() {
   var num       = randomNumberGenerator(quotes);
   var quote     = quotes[num].quote; // bug present in one of the quotes
