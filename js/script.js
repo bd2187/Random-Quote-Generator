@@ -25,10 +25,14 @@ var mod = (function() {
   }
 
   return {
+    foo: function() {
+      return generateQuote();
+    },
     publicEventListener() {
       return newQuoteBtn.addEventListener('click', generateQuote);
     }
   }
 })();
 
+window.addEventListener('load', mod.foo);
 mod.publicEventListener();
