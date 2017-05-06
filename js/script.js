@@ -1,1 +1,1 @@
-
+console.log(quotes.length);
