@@ -19,13 +19,13 @@ var mod = (function() {
   }
 
   function adjustHTML(quote, character, film) {
-    quoteEl.textContent = quote;
+    quoteEl.textContent = `"${quote}"`;
     characterEl.textContent = character;
     filmEl.textContent = film;
   }
 
   function tweet() {
-    return twitterBtn.setAttribute('href', `https://twitter.com/intent/tweet?text=${quoteEl.textContent} - ${characterEl.textContent}`);
+    return twitterBtn.setAttribute('href', `https://twitter.com/intent/tweet?text=${quoteEl.textContent} -${characterEl.textContent}`);
   }
 
   return {

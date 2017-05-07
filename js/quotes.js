@@ -142,7 +142,7 @@ var quotes = [
     },
     {
       quote: "I’ve got a bad feeling about this.",
-      character: "Basically Everyone",
+      character: "Everyone",
       film: "Every Star Wars Film"
     },
     {

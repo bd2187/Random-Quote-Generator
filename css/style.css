@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #B7C4BF;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.wrapper {
+  background: #FFFFFF;
+  text-align: center;
+  width: 90%;
+  height: 350px;
+  margin: 0 auto;
+  margin-top: 8em;
+  padding: 2.2em;
+
+  border-radius: 10px;
+
+  position: relative;
+
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.quote {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
+  color: #141414;
+}
+
+.references {
+  /*background-color: green;*/
+  text-align: right;
+  width: 50%;
+  margin-top: 2em;
+  float: right;
+
+  font-style: italic;
+  color: #575959;
+}
+
+.buttons {
+  /*background: blue;*/
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+
+  position: absolute;
+  bottom: 2.2em; /* same as .wrapper padding*/
+  left: 0;
+  right: 0;
+}
+
+.twitter,
+.newQuote {
+  background: #19AD0A;
+
+  font-size: 1em;
+  display: inline-block;
+  color: white;
+  padding: .5em;
+  border: 0;
+  border-radius: 5px;
+
+  cursor: pointer;
+  cursor: hand;
+
+  outline: none;
+
+  border: 1px solid #fff;
+}
+
+.twitter:hover,
+.newQuote:hover {
+  background: white;
+  color: #19AD0A;
+  border: 1px solid #19AD0A;
+
+  transition: all .5s;
+}
