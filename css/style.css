@@ -15,6 +15,7 @@ p {
   background: #FFFFFF;
   text-align: center;
   width: 90%;
+  max-width: 523.8px;
   height: 350px;
   margin: 0 auto;
   margin-top: 8em;
