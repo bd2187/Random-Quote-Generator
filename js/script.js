@@ -5,9 +5,10 @@ var mod = (function() {
   var newQuoteBtn   = document.querySelector('.newQuote');
   var twitterBtn    = document.querySelector('.twitter');
 
+  // invokes randomNumberGenerator() & adjustHTML()
   function generateQuote() {
     var num       = randomNumberGenerator(quotes); // found in quotes.js
-    var quote     = quotes[num].quote; // bug present in one of the quotes
+    var quote     = quotes[num].quote;
     var character = quotes[num].character;
     var film      = quotes[num].film;
     return adjustHTML(quote, character, film);
