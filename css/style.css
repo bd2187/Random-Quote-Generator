@@ -84,5 +84,8 @@ p {
   color: #19AD0A;
   border: 1px solid #19AD0A;
 
+  -o-transition: all .5s;
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
