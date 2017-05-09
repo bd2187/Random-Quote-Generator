@@ -2,8 +2,9 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
   background: #B7C4BF;
+  width: 100%;
 }
 
 p {
@@ -15,8 +16,8 @@ p {
   background: #FFFFFF;
   text-align: center;
   width: 90%;
-  max-width: 523.8px;
-  height: 350px;
+  max-width: 32.81em;
+  height: 21.88em;
   margin: 0 auto;
   margin-top: 8em;
   padding: 2.2em;
@@ -89,3 +90,6 @@ p {
   -webkit-transition: all .5s;
   transition: all .5s;
 }
+
+
+/*add media queries*/
