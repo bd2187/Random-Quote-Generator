@@ -13,10 +13,10 @@ var mod = (function() {
 
   // invokes randomNumberGenerator() & adjustHTML()
   function generateQuote() {
-    var num       = randomNumberGenerator(quotes); // found in quotes.js
-    var quote     = quotes[num].quote;
-    var character = quotes[num].character;
-    var film      = quotes[num].film;
+    // quotes object found in quotes.js
+    var num = randomNumberGenerator(quotes);
+    // ES6 Object destructuring:
+    var { quote, character, film } = quotes[num];
     return adjustHTML(quote, character, film);
   }
 
