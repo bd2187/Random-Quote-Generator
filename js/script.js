@@ -7,6 +7,10 @@ var mod = (function() {
   var newQuoteBtn   = document.querySelector('.newQuote');
   var twitterBtn    = document.querySelector('.twitter');
 
+  // invoke eventListeners
+  newQuoteBtn.addEventListener('click', generateQuote);
+  twitterBtn.addEventListener('click', tweet)
+
   // invokes randomNumberGenerator() & adjustHTML()
   function generateQuote() {
     var num       = randomNumberGenerator(quotes); // found in quotes.js
@@ -32,9 +36,7 @@ var mod = (function() {
   }
 
   return {
-    generateQuote: generateQuote,
-    newQuoteBtn: newQuoteBtn.addEventListener('click', generateQuote),
-    tweet: twitterBtn.addEventListener('click', tweet)
+    generateQuote: generateQuote
   }
 
 })();
