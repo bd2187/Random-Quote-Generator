@@ -5,6 +5,7 @@
 body, html {
   background: #B7C4BF;
   width: 100%;
+  position: relative;
 }
 
 p {
@@ -17,7 +18,7 @@ p {
   text-align: center;
   width: 90%;
   max-width: 32.81em;
-  height: 21.88em;
+  height: 25em;
   margin: 0 auto;
   margin-top: 8em;
   padding: 2.2em;
@@ -93,3 +94,20 @@ p {
 
 
 /*add media queries*/
+
+@media screen and (min-width: 500px) {
+
+  .wrapper {
+    height: 30em;
+  }
+
+  .quote {
+    font-size: 2em;
+  }
+
+  .twitter,
+  .newQuote {
+    font-size: 1.5em;
+  }
+
+}

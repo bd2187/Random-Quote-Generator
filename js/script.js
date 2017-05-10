@@ -1,3 +1,5 @@
+"use strict"
+
 var mod = (function() {
   var quoteEl       = document.querySelector('.quote');
   var characterEl   = document.querySelector('.character');
@@ -30,19 +32,11 @@ var mod = (function() {
   }
 
   return {
-    foo: function() {
-      return generateQuote();
-    },
-    publicQuoteGenerator() {
-      return newQuoteBtn.addEventListener('click', generateQuote);
-    },
-    publicTweetGenerator() {
-      twitterBtn.addEventListener('click', tweet);
-    }
-
+    generateQuote: generateQuote,
+    newQuoteBtn: newQuoteBtn.addEventListener('click', generateQuote),
+    tweet: twitterBtn.addEventListener('click', tweet)
   }
+
 })();
 
-window.addEventListener('load', mod.foo);
-mod.publicQuoteGenerator();
-mod.publicTweetGenerator();
+mod.generateQuote();
