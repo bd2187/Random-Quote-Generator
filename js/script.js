@@ -1,44 +1,35 @@
-"use strict"
+"use strict";
 
-var mod = (function() {
+var quoteMod = (function(){
   var quoteEl       = document.querySelector('.quote');
   var characterEl   = document.querySelector('.character');
   var filmEl        = document.querySelector('.film');
   var newQuoteBtn   = document.querySelector('.newQuote');
   var twitterBtn    = document.querySelector('.twitter');
 
-  // invoke eventListeners
-  newQuoteBtn.addEventListener('click', generateQuote);
-  twitterBtn.addEventListener('click', tweet)
-
-  // invokes randomNumberGenerator() & adjustHTML()
-  function generateQuote() {
-    // quotes object found in quotes.js
-    var num = randomNumberGenerator(quotes);
-    // ES6 Object destructuring:
-    var { quote, character, film } = quotes[num];
-    return adjustHTML(quote, character, film);
+  var quoteObj = {
+    generateQuote() { // invoke randomNumber() & adjustHTML()
+      var num       = quoteObj.randomNumber(quotes); // found in quotes.js
+      var quote     = quotes[num].quote;
+      var character = quotes[num].character;
+      var film      = quotes[num].film;
+      quoteObj.adjustHTML(quote, character, film);
+    },
+    randomNumber(arr = []) { return Math.floor(Math.random() * arr.length); },
+    adjustHTML(quote, character, film) {
+      quoteEl.textContent = `"${quote}"`;
+      characterEl.textContent = character;
+      filmEl.textContent = film;
+    },
+    tweet() {
+      return twitterBtn.setAttribute('href', `https://twitter.com/intent/tweet?text=${quoteEl.textContent} -${characterEl.textContent}`);
+    },
+    eventListeners() {
+      twitterBtn.addEventListener('click', this.tweet);
+      newQuoteBtn.addEventListener('click', this.generateQuote);
+    }
   }
 
-  function randomNumberGenerator(arr = []) {
-    var randomNum = Math.floor(Math.random() * arr.length);
-    return randomNum;
-  }
-
-  function adjustHTML(quote, character, film) {
-    quoteEl.textContent = `"${quote}"`;
-    characterEl.textContent = character;
-    filmEl.textContent = film;
-  }
-
-  function tweet() {
-    return twitterBtn.setAttribute('href', `https://twitter.com/intent/tweet?text=${quoteEl.textContent} -${characterEl.textContent}`);
-  }
-
-  return {
-    generateQuote: generateQuote
-  }
-
+  quoteObj.eventListeners();
+  quoteObj.generateQuote();
 })();
-
-mod.generateQuote();
