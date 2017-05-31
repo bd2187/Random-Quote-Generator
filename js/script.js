@@ -25,12 +25,18 @@ var quoteObj = {
   },
   tweet() {
     return twitterBtn.setAttribute('href', `https://twitter.com/intent/tweet?text=${quoteEl.textContent} -${characterEl.textContent}`);
+  },
+  eventListeners() {
+    var self = this;
+    twitterBtn.addEventListener('click', self.tweet);
+    newQuoteBtn.addEventListener('click', self.generateQuote);
   }
 }
 
+quoteObj.eventListeners();
 quoteObj.generateQuote();
-newQuoteBtn.addEventListener('click', quoteObj.generateQuote),
-twitterBtn.addEventListener('click', quoteObj.tweet)
+// newQuoteBtn.addEventListener('click', quoteObj.generateQuote),
+// twitterBtn.addEventListener('click', quoteObj.tweet)
 
 // var mod = (function() {
 //   var quoteEl       = document.querySelector('.quote');
