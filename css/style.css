@@ -87,6 +87,8 @@ p {
   outline: none;
 
   border: 1px solid #fff;
+
+  transition: all .5s;
 }
 
 .twitter:hover,
@@ -98,7 +100,6 @@ p {
   -o-transition: all .5s;
   -moz-transition: all .5s;
   -webkit-transition: all .5s;
-  transition: all .5s;
 }
 
 
