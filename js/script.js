@@ -9,11 +9,11 @@ var quoteMod = (function(){
 
   var quoteObj = {
     generateQuote() { // invoke randomNumber() & adjustHTML()
-      var num       = quoteObj.randomNumber(quotes); // found in quotes.js
+      var num       = this.randomNumber(quotes); // found in quotes.js
       var quote     = quotes[num].quote;
       var character = quotes[num].character;
       var film      = quotes[num].film;
-      quoteObj.adjustHTML(quote, character, film);
+      this.adjustHTML(quote, character, film);
     },
     randomNumber(arr = []) { return Math.floor(Math.random() * arr.length); },
     adjustHTML(quote, character, film) {
@@ -26,7 +26,7 @@ var quoteMod = (function(){
     },
     eventListeners() {
       twitterBtn.addEventListener('click', this.tweet);
-      newQuoteBtn.addEventListener('click', this.generateQuote);
+      newQuoteBtn.addEventListener('click', function(){ quoteObj.generateQuote() });
     }
   }
 
