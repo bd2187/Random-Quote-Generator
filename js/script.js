@@ -25,11 +25,17 @@ var quoteMod = (function(){
       return twitterBtn.setAttribute('href', `https://twitter.com/intent/tweet?text=${quoteEl.textContent} -${characterEl.textContent}`);
     },
     eventListeners() {
-      twitterBtn.addEventListener('click', this.tweet);
+      twitterBtn.addEventListener('click', quoteObj.tweet);
       newQuoteBtn.addEventListener('click', function(){ quoteObj.generateQuote() });
     }
   }
 
-  quoteObj.eventListeners();
-  quoteObj.generateQuote();
+  return {
+    inv() {
+      quoteObj.eventListeners();
+      quoteObj.generateQuote();
+    }
+  }
 })();
+
+quoteMod.inv();
