@@ -82,6 +82,7 @@ p, a {
 .wrap .buttons button {
   background: none;
   border: none;
+  outline: none;
   padding: .5em;
   font-size: 1.4em;
   margin: 0 .5em;
