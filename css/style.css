@@ -1,0 +1,29 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+p, a {
+  margin: 0;
+}
+
+.wrap {
+  background: #000;
+  min-height: 100vh;
+  position: relative;
+}
+
+.wrap .container {
+  background: red;
+  color: blue;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

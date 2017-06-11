@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 var mod = (function() {
   var quoteEl       = document.querySelector('.quote');
