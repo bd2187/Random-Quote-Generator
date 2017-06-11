@@ -1,3 +1,13 @@
+// Variables
+$lightBlue: #51ADC2;
+$lineHeight: 1.5;
+
+// mixin
+@mixin widthSeventy {
+  width: 70%; // consider mixin / variable
+  margin: 0 auto; // consider mixin / variable
+}
+
 * {
   box-sizing: border-box;
 }
@@ -12,12 +22,12 @@ p, a {
   position: relative;
 
   .container {
-    background: red;
-    color: blue;
+    // background: red;
+    color: $lightBlue;
 
+    @include widthSeventy;
     text-align: center;
-    width: 70%;
-    margin: 0 auto;
+    padding: .3em;
 
     position: absolute;
     top: 40%;
@@ -26,24 +36,41 @@ p, a {
     transform: translateY(-50%);
 
     .quote {
-      font-size: 1.2em;
-      line-height: 1.5;
+      font-size: 1.3em;
+      line-height: $lineHeight;
     }
 
     .references {
-      background: yellow;
+      // background: yellow;
       text-align: right;
+      line-height: $lineHeight;
       margin: 2em 0;
+
+      font-style: italic;
+      .character {
+        font-size: 1em;
+      }
+      .film {
+        font-size: .8em;
+      }
     }
 
-  }
+  } // end container
 
   .buttons {
-    background: red;
+    // background: red;
     position: absolute;
     text-align: center;
     bottom: 1em;
-    left: 0;
-    right: 0;
+    left: 1em;
+    right: 1em;
+    @include widthSeventy;
+    button {
+      // background: yellow;
+      padding: .5em;
+      font-size: 1.4em;
+      margin: 0 .5em;
+      color: $lightBlue;
+    }
   }
-}
+} // end .wrapper
