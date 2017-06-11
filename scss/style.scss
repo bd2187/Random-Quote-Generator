@@ -1,12 +1,5 @@
-// Variables
-$lightBlue: #51ADC2;
-$lineHeight: 1.5;
-
-// mixin
-@mixin widthSeventy {
-  width: 70%; // consider mixin / variable
-  margin: 0 auto; // consider mixin / variable
-}
+@import "variables";
+@import "mixins";
 
 * {
   box-sizing: border-box;
@@ -20,12 +13,12 @@ p, a {
   background: #000;
   min-height: 100vh;
   position: relative;
+  padding: 1em;
 
   .container {
-    // background: red;
+    @include widthSeventy;
     color: $lightBlue;
 
-    @include widthSeventy;
     text-align: center;
     padding: .3em;
 
@@ -38,10 +31,10 @@ p, a {
     .quote {
       font-size: 1.3em;
       line-height: $lineHeight;
+      @include mq(1.6em);
     }
 
     .references {
-      // background: yellow;
       text-align: right;
       line-height: $lineHeight;
       margin: 2em 0;
@@ -49,28 +42,33 @@ p, a {
       font-style: italic;
       .character {
         font-size: 1em;
+        @include mq(1.3em);
       }
       .film {
         font-size: .8em;
+        @include mq(1em);
       }
     }
 
   } // end container
 
   .buttons {
-    // background: red;
+    @include widthSeventy;
     position: absolute;
     text-align: center;
     bottom: 1em;
     left: 1em;
     right: 1em;
-    @include widthSeventy;
+
     button {
-      // background: yellow;
+      background: none;
+      border: none;
+
       padding: .5em;
       font-size: 1.4em;
       margin: 0 .5em;
       color: $lightBlue;
+      @include mq(1.7em);
     }
-  }
+  } // end .buttons
 } // end .wrapper
