@@ -1,0 +1,74 @@
+@import "variables";
+@import "mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+p, a {
+  margin: 0;
+}
+
+.wrap {
+  background: #000;
+  min-height: 100vh;
+  position: relative;
+  padding: 1em;
+
+  .container {
+    @include widthSeventy;
+    color: $lightBlue;
+
+    text-align: center;
+    padding: .3em;
+
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+
+    .quote {
+      font-size: 1.3em;
+      line-height: $lineHeight;
+      @include mq(1.6em);
+    }
+
+    .references {
+      text-align: right;
+      line-height: $lineHeight;
+      margin: 2em 0;
+
+      font-style: italic;
+      .character {
+        font-size: 1em;
+        @include mq(1.3em);
+      }
+      .film {
+        font-size: .8em;
+        @include mq(1em);
+      }
+    }
+
+  } // end container
+
+  .buttons {
+    @include widthSeventy;
+    position: absolute;
+    text-align: center;
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+
+    button {
+      background: none;
+      border: none;
+
+      padding: .5em;
+      font-size: 1.4em;
+      margin: 0 .5em;
+      color: $lightBlue;
+      @include mq(1.7em);
+    }
+  } // end .buttons
+} // end .wrapper

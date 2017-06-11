@@ -1,0 +1,12 @@
+// mixin
+@mixin widthSeventy {
+  width: 70%; // consider mixin / variable
+  max-width: 639.09px;
+  margin: 0 auto; // consider mixin / variable
+}
+
+@mixin mq($fontSize) {
+  @media screen and (min-width: 800px) {
+    font-size: $fontSize;
+  }
+}

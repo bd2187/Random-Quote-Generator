@@ -1,123 +1,95 @@
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-body, html {
-  background: #B7C4BF;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-
-  padding: .3em;
-  padding-top: 1em;
-}
-
-p {
+p, a {
   margin: 0;
-  line-height: 1.5;
 }
 
-.wrapper {
-  background: #FFFFFF;
-  text-align: center;
-  width: 90%;
-  max-width: 32.81em;
-  height: 25em;
-  margin: 0 auto;
-  padding: 2.2em;
-
-  border-radius: 10px;
-
+.wrap {
+  background: #000;
+  min-height: 100vh;
   position: relative;
+  padding: 1em;
+}
 
-  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-
+.wrap .container {
+  width: 70%;
+  max-width: 639.09px;
+  margin: 0 auto;
+  color: #51ADC2;
+  text-align: center;
+  padding: .3em;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 0;
   right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
-.quote {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.5em;
-  color: #141414;
+.wrap .container .quote {
+  font-size: 1.3em;
+  line-height: 1.5;
 }
 
-.references {
-  /*background-color: green;*/
+@media screen and (min-width: 800px) {
+  .wrap .container .quote {
+    font-size: 1.6em;
+  }
+}
+
+.wrap .container .references {
   text-align: right;
-  width: 50%;
-  margin-top: 2em;
-  float: right;
-
+  line-height: 1.5;
+  margin: 2em 0;
   font-style: italic;
-  color: #575959;
 }
 
-.buttons {
-  /*background: blue;*/
-  width: 50%;
-  text-align: center;
+.wrap .container .references .character {
+  font-size: 1em;
+}
+
+@media screen and (min-width: 800px) {
+  .wrap .container .references .character {
+    font-size: 1.3em;
+  }
+}
+
+.wrap .container .references .film {
+  font-size: .8em;
+}
+
+@media screen and (min-width: 800px) {
+  .wrap .container .references .film {
+    font-size: 1em;
+  }
+}
+
+.wrap .buttons {
+  width: 70%;
+  max-width: 639.09px;
   margin: 0 auto;
-
   position: absolute;
-  bottom: 2.2em; /* same as .wrapper padding*/
-  left: 0;
-  right: 0;
+  text-align: center;
+  bottom: 1em;
+  left: 1em;
+  right: 1em;
 }
 
-.twitter,
-.newQuote {
-  background: #19AD0A;
-
-  font-size: 1.2em;
-  display: inline-block;
-  color: white;
-  padding: .8em;
-  border: 0;
-  border-radius: 5px;
-
-  cursor: pointer;
-  cursor: hand;
-
-  outline: none;
-
-  border: 1px solid #fff;
-
-  transition: all .5s;
+.wrap .buttons button {
+  background: none;
+  border: none;
+  padding: .5em;
+  font-size: 1.4em;
+  margin: 0 .5em;
+  color: #51ADC2;
 }
 
-.twitter:hover,
-.newQuote:hover {
-  background: white;
-  color: #19AD0A;
-  border: 1px solid #19AD0A;
-
-  -o-transition: all .5s;
-  -moz-transition: all .5s;
-  -webkit-transition: all .5s;
-}
-
-
-/*add media queries*/
-
-@media screen and (min-width: 500px) and (orientation: landscape) {
-
-  .wrapper {
-    height: 30em;
+@media screen and (min-width: 800px) {
+  .wrap .buttons button {
+    font-size: 1.7em;
   }
-
-  .quote {
-    font-size: 2em;
-  }
-
-  .twitter,
-  .newQuote {
-    font-size: 1.5em;
-  }
-
 }
