@@ -10,6 +10,7 @@ p, a {
   background: #000;
   min-height: 100vh;
   position: relative;
+
   .container {
     background: red;
     color: blue;
@@ -23,5 +24,26 @@ p, a {
     left: 0;
     right: 0;
     transform: translateY(-50%);
+
+    .quote {
+      font-size: 1.2em;
+      line-height: 1.5;
+    }
+
+    .references {
+      background: yellow;
+      text-align: right;
+      margin: 2em 0;
+    }
+
+  }
+
+  .buttons {
+    background: red;
+    position: absolute;
+    text-align: center;
+    bottom: 1em;
+    left: 0;
+    right: 0;
   }
 }

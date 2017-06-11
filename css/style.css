@@ -27,3 +27,23 @@ p, a {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+.wrap .container .quote {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.wrap .container .references {
+  background: yellow;
+  text-align: right;
+  margin: 2em 0;
+}
+
+.wrap .buttons {
+  background: red;
+  position: absolute;
+  text-align: center;
+  bottom: 1em;
+  left: 0;
+  right: 0;
+}
