@@ -8,7 +8,7 @@ p, a {
 }
 
 .wrap {
-  background: #000;
+  background: #000 url("../stars.jpg") center/cover no-repeat;
   min-height: 100vh;
   position: relative;
   padding: 4em;
@@ -19,7 +19,7 @@ p, a {
   width: 70%;
   max-width: 639.09px;
   margin: 0 auto;
-  color: #5186C2;
+  color: #5A96D9;
   text-align: center;
   padding: .3em;
   position: absolute;
@@ -87,7 +87,7 @@ p, a {
   padding: .5em;
   font-size: 1.4em;
   margin: 0 .5em;
-  color: #5186C2;
+  color: #5A96D9;
 }
 
 @media screen and (min-width: 800px) {
